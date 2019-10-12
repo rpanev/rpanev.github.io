@@ -18,10 +18,10 @@ ENPASSWD="$MKP $PASSWD"
 useradd $1 -p "$ENPASSWD"
 echo "Creating mysql user & database for $1"
 mysql -u root --password=your_mysql_password -e "CREATE DATABASE $1; CREATE USER $1 IDENTIFIED BY '$PASSWD'; GRANT ALL ON $1.* TO '$1'"
-{% highlight bash %}
+{% endhighlight %}
 
 
 {% highlight shell %}
 chmod +x lmuser.sh
 ./lmuser.sh users
-{% highlight bash %}
+{% endhighlight %}
