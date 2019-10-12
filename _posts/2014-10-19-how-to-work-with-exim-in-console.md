@@ -16,7 +16,7 @@ Email information when sending and receiving :
 
 Real time tracking entries exim_mainlog:
 
-{% highlight shell %}tailf /var/log/exim_mainlog
+{% highlight shell %} tailf /var/log/exim_mainlog
 {% endhighlight %}
 
 Look at the last 500 entries in exim_mainlog:
@@ -26,8 +26,8 @@ Look at the last 500 entries in exim_mainlog:
 
 To delete messages in queue older than 5 days (sometimes stand there and do not want to go). The figure comes from (86,400 seconds is one day * 5 days = 432,000 seconds):
 
-<pre
->exiqgrep -o 432000 -i | xargs exim -Mrm
+{% highlight shell %}
+exiqgrep -o 432000 -i | xargs exim -Mrm
 {% endhighlight %}
 
 To view the headers of the message, sometimes it is useful if you need more information about any sent, received or not sent, not received message: 
