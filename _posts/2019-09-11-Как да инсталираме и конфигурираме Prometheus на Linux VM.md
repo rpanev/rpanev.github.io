@@ -19,9 +19,6 @@ tags:
 <img src="https://raw.githubusercontent.com/rpanev/rpanev.github.io/master/static/img/_posts/Prometheus-Logo.jpg" alt="Prometheus " />
 </center>
 
-Как да инсталираме и конфигурираме Prometheus на Linux VM
-
-
 # Инсталация от source 
 
 1. Ъпдейт на репозиторито
@@ -70,12 +67,13 @@ chown -R prometheus:prometheus /etc/prometheus/console_libraries
 
 1. Създаваме фйала prometheus.yml
 
-{% highlight bash %}touch /etc/prometheus/prometheus.yml
+{% highlight bash %}
+touch /etc/prometheus/prometheus.yml
 {% endhighlight %}
 
 2. Копирайте следните редове във вашият prometheus.yml файл.
 
-{% highlight bash %}global:
+{% highlight yml %}global:
   scrape_interval: 10s
  
 scrape_configs:
@@ -87,7 +85,8 @@ scrape_configs:
 
 3. Оправяме правата на файла:
 
-{% highlight bash %}chown prometheus:prometheus /etc/prometheus/prometheus.yml
+{% highlight bash %}
+chown prometheus:prometheus /etc/prometheus/prometheus.yml
 {% endhighlight %}
 
 # Създаваме Prometheus Service файл
@@ -120,7 +119,8 @@ WantedBy=multi-user.target
 
 3. Презареждаме systemd service и стартираме prometheus
 
-{% highlight bash %}systemctl daemon-reload
+{% highlight bash %}
+systemctl daemon-reload
 systemctl start prometheus
 {% endhighlight %}
 
@@ -128,5 +128,6 @@ systemctl start prometheus
 
 Достъп до Web UI може да направите на вашият IP и порт 9090
 
-{% highlight bash %}http://&lt;prometheus-ip>:9090/graph
+{% highlight bash %}
+http://prometheus-ip>:9090/graph
 {% endhighlight %}
