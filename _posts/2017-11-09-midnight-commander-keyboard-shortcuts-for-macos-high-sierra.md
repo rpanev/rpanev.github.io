@@ -1,24 +1,12 @@
 ---
 id: 1025
-title:  Midnight Commander Keyboard Shortcuts for macOS High Sierra
+title:  Midnight Commander Keyboard Shortcuts for MacOS High Sierra
 date: 2017-11-09T10:25:12+00:00
 author: panev
 layout: post
-guid: https://www.panevinfo.eu/blog/?p=1025
-permalink: /midnight-commander-keyboard-shortcuts-for-macos-high-sierra.html
-tie_sidebar_pos:
-  - default
-tie_post_slider:
-  - "1019"
-tie_views:
-  - "6128"
-image: /wp-content/uploads/2017/11/macos-high-sierra.jpg
 categories:
   - Apple
 ---
-## <a href="https://midnight-commander.org/" target="_blank" rel="noopener"> Midnight Commander </a>Keyboard Shortcuts for <a href="https://www.apple.com/macos/high-sierra/" target="_blank" rel="noopener">macOS High Sierra</a><img class="wp-image-1030 alignleft" src="https://www.panevinfo.eu/wp-content/uploads/2017/11/mc-mac-logo-150x150.png" alt=" Midnight Commander Keyboard Shortcuts for macOS High Sierra" width="188" height="188" />
-
-&nbsp;
 
 &#8211;&#8211; Esc &#8211;&#8211;  
 Quick change directory: Esc + c  
@@ -53,8 +41,3 @@ F7: create directory
 F8: delete file / directory  
 F9: open menu bar  
 F10: exit MC
-
-Вижте също и :
-
-<a href="https://www.panevinfo.eu/blog/raspberrypinginx.html" target="_blank" rel="noopener">Raspberry pi Nginx</a>  
-<a href="https://www.panevinfo.eu/blog/kvm-and-virtmanager-on-centos-7.html" target="_blank" rel="noopener">KVM and VirtManager on CentOS 7</a>

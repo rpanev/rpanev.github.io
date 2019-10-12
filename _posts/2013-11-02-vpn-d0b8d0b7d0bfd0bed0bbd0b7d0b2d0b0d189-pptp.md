@@ -4,10 +4,6 @@ title: VPN използващ PPTP
 date: 2013-11-02T16:18:00+00:00
 author: panev
 layout: post
-guid: http://panevinfo.eu/blog//?p=236
-permalink: '/vpn-%d0%b8%d0%b7%d0%bf%d0%be%d0%bb%d0%b7%d0%b2%d0%b0%d1%89-pptp.html'
-tie_views:
-  - "207"
 categories:
   - Linux
 ---
@@ -27,9 +23,7 @@ No package pptpd available.
 Error: Nothing to do
 </pre>
 
-<!--more-->
 
-  
 За това просто напишете в конзолата :
 
 <pre>rpm -i http://poptop.sourceforge.net/yum/stable/rhel6/pptp-release-current.noarch.rpm</pre>

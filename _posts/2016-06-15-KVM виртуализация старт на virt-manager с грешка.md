@@ -17,7 +17,7 @@ tags:
 
 Днес се наложи да инсталирам на CentOS 6.8 KVM виртуализация и при стартиране на virt-manager ми изписа следната грешка 🙂
 
-{% highlight bash %}
+{% highlight shell %}
 [root@localhost r.panev]# virt-manager
 process 18532: D-Bus library appears to be incorrectly set up; failed to read machine uuid: Failed to open "/var/lib/dbus/machine-id": No such file or directory
 See the manual page for dbus-uuidgen to correct this issue.
@@ -29,7 +29,7 @@ Aborted
 
 оказа се, че решението е просто да се изпълни командата 
 
-{% highlight bash %}
+{% highlight shell %}
 dbus-uuidgen > /var/lib/dbus/machine-id
 {% endhighlight %}
 

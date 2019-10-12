@@ -41,7 +41,7 @@ urls:
 url: "https://rpanev.pro"
 baseurl: ""
 paginate: 20
-per_page: 20
+per_page: 30
 paginate_path: "/page/:num/"
 markdown: kramdown
 gems:

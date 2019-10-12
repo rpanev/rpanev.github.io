@@ -1,55 +1,50 @@
 ---
 id: 630
-title: 'KVM &#8211; CentOS 6.5 how to&#8230;'
+title: 'KVM CentOS 6.5 how to'
 date: 2014-04-05T23:56:23+00:00
 author: panev
 layout: post
-guid: http://panevinfo.eu/blog//?p=630
-permalink: /kvm-centos-6-5-how-to.html
-tie_views:
-  - "208"
-image: /wp-content/uploads/2014/04/kvmbanner-logo2-e1467698466931.png
 categories:
   - Linux
 ---
-:KVM (Kernel-базирани Virtual Machine) + QEMU. Това означава, че процесора на компютъра ви трябва да поддържаIntel VT или AMD-V.  
+KVM (Kernel-базирани Virtual Machine) + QEMU. Това означава, че процесора на компютъра ви трябва да поддържаIntel VT или AMD-V.  
 Първа стъпка е да инсталираме KVM. Това става като напишете в конзола :
 
-<pre>yum groupinstall "Virtualisation Tools" "Virtualization Platform"
+{% highlight shell %}yum groupinstall "Virtualisation Tools" "Virtualization Platform"
 yum install kvm qemu-kvm python-virtinst libvirt libvirt-python virt-manager libguestfs-tools bridge-utils 
-</pre>
+{% endhighlight %}
 
 Проверка на модула дали е зареден :
 
-<pre>┌(eragon)─(12:38 AM Sun Apr 06)
+{% highlight bshellash %}┌(eragon)─(12:38 AM Sun Apr 06)
 └─(~)─(32 files, 4.4Mb)─> ~
  #  lsmod | grep kvm
 kvm_intel              54285  3
 kvm                   332980  1 kvm_intel
-</pre>
+{% endhighlight %}
 
 Стартирайте KVM
 
-<pre>┌(eragon)─(12:40 AM Sun Apr 06)
+{% highlight shell %}┌(eragon)─(12:40 AM Sun Apr 06)
 └─(~)─(32 files, 4.4Mb)─> ~
 # etc/rc.d/init.d/libvirtd start 
 Starting libvirtd daemon:      [ОК]
 chkconfig libvirtd on
-</pre>
+{% endhighlight %}
 
-<pre>┌(eragon)─(12:45 AM Sun Apr 06)
+{% highlight shell %}┌(eragon)─(12:45 AM Sun Apr 06)
 └─(~)─(32 files, 4.4Mb)─> ~
  #  cd /etc/sysconfig/network-scripts
-</pre>
+{% endhighlight %}
 
 Създайте интерфейс ifcfg-br0.
 
-<pre>cp ifcfg-eth0 ifcfg-br0 
-</pre>
+{% highlight shell %}cp ifcfg-eth0 ifcfg-br0 
+{% endhighlight %}
 
 Редактирайте първо ifcfg-br0.
 
-<pre>DEVICE=br0             #change
+{% highlight shell %}DEVICE=br0             #change
 ONBOOT=yes
 BOOTPROTO=none
 IPADDR=192.168.1.11
@@ -60,11 +55,11 @@ DNS1=192.168.1.1
 DNS2=8.8.8.8
 IPV6INIT=no
 USERCTL=no
-</pre>
+{% endhighlight %}
 
 След това ifcfg-eth0.
 
-<pre>DEVICE=eth0
+{% highlight shell %}DEVICE=eth0
 ONBOOT=yes
 BOOTPROTO=none
 IPADDR=192.168.1.11
@@ -76,15 +71,15 @@ DNS2=8.8.8.8
 IPV6INIT=no
 USERCTL=no
 BRIDGE=br0             # add
-</pre>
+{% endhighlight %}
 
 Рестарт на network service 
 
-<pre>/etc/rc.d/init.d/network restart </pre>
+{% highlight shell %}/etc/rc.d/init.d/network restart {% endhighlight %}
 
 Вижте мрежовите настройки:
 
-<pre>┌(eragon)─(12:48 AM Sun Apr 06)
+{% highlight shell %}┌(eragon)─(12:48 AM Sun Apr 06)
 └─(~)─(32 files, 4.4Mb)─> ~
  # ifconfig
 br0       Link encap:Ethernet  HWaddr 00:24:1D:CA:8D:AB
@@ -129,10 +124,10 @@ vnet0     Link encap:Ethernet  HWaddr FE:54:00:C0:30:F7
           TX packets:100001 errors:0 dropped:0 overruns:258 carrier:0
           collisions:0 txqueuelen:500
           RX bytes:4028806 (3.8 MiB)  TX bytes:138216299 (131.8 MiB)
-</pre>
+{% endhighlight %}
 
 Задължително добавете и:
 
-<pre>echo “-I FORWARD -m physdev --physdev-is-bridged -j ACCEPT” > /etc/sysconfig/iptables-forward-bridged</pre>
+{% highlight shell %}echo “-I FORWARD -m physdev --physdev-is-bridged -j ACCEPT” > /etc/sysconfig/iptables-forward-bridged{% endhighlight %}
 
 иначе има вероятност да се чудите защо нямате мрежа на виртуалните машинки. :)))

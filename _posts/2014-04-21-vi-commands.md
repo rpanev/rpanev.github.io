@@ -4,11 +4,7 @@ title: vi commands
 date: 2014-04-21T12:20:23+00:00
 author: panev
 layout: post
-guid: http://panevinfo.eu/blog//?p=664
-permalink: /vi-commands.html
-tie_views:
-  - "394"
-image: /wp-content/uploads/2014/04/Beginner-039-s-Vi-Editor-Guide-2.png
+
 categories:
   - FreeBSD
   - Linux
@@ -81,4 +77,3 @@ N reverse last / or ?
 ]] next section/function  
 [[ previous section/function  
 % find matching () { or }  
-[full vi-table commands](http://panevinfo.eu/blog//wp-content/uploads/2014/04/vi-table.txt)

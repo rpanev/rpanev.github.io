@@ -4,21 +4,12 @@ title: Хубав shell скрип за backup на MySql база данни
 date: 2014-02-25T22:42:15+00:00
 author: panev
 layout: post
-guid: http://panevinfo.eu/blog//?p=397
-permalink: '/%d1%85%d1%83%d0%b1%d0%b0%d0%b2-shell-%d1%81%d0%ba%d1%80%d0%b8%d0%bf-%d0%b7%d0%b0-backup-%d0%bd%d0%b0-mysql-%d0%b1%d0%b0%d0%b7%d0%b0-%d0%b4%d0%b0%d0%bd%d0%bd%d0%b8.html'
-wpgplus_message:
-  - ""
-wpgplus_publish:
-  - 'yes'
-tie_views:
-  - "238"
-image: /wp-content/uploads/2014/02/mysqllogo.gif
 categories:
-  - code
+  - bash
   - FreeBSD
   - Linux
 ---
-<pre>#!/bin/bash
+{% highlight bash %}#!/bin/bash
 # Shell script to backup MySql database 
 # To backup Nysql databases file to /backup dir and later pick up by your 
 # script. You can skip few databases from backup too.
@@ -94,4 +85,4 @@ do
     fi
 done
 
-</pre>
+{% endhighlight %}

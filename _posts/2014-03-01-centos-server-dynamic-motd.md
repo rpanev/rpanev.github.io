@@ -4,21 +4,17 @@ title: centos server dynamic motd
 date: 2014-03-01T00:00:28+00:00
 author: panev
 layout: post
-guid: http://panevinfo.eu/blog//?p=456
-permalink: /centos-server-dynamic-motd.html
-tie_views:
-  - "217"
-image: /wp-content/uploads/2014/03/s-5c-a-517-e1414183729413.png
 categories:
-  - code
-  - Linux
+  - bash
+  - linux
 ---
-Допълнение към [тази статия](http://panevinfo.eu/blog//server-status-motd/ "server status motd"). Добавени са цветове, и няколко допълнителни функции. Скрипта може да се използва както за MOTD (message of the day) така и като bash скрипт с който да изкарвате моментна статистика на машината си 🙂
+Скрипта може да се използва както за MOTD (message of the day) така и като bash скрипт с който да изкарвате моментна статистика на машината си 🙂
 
-<pre>#!/bin/bash
+{% highlight bash %}
+#!/bin/bash
 #Server Status Script
 #Last updated: March - 2014
-#http://panevifo.eu
+#http://rpanev.pro
 #CPU info
 cpumodel=`cat /proc/cpuinfo | head -20 | grep "model name"| awk '{print $4, $5, $6, $7, $8, $10 }'`
 core0=`sensors -u | head -11 |grep "temp2_input"| awk '{print $2 }' |awk '{printf("%d\n",$1 + 0.5);}'`
@@ -73,12 +69,12 @@ echo -e "
 " > /etc/motd
 #exit 0
 
-</pre>
+{% endhighlight %}
 
 За да ползвате скрипта като обикновен bash сложете коментар пред 
 
-<pre>> /etc/motd</pre>
+{% highlight bash %}> /etc/motd{% endhighlight %}
 
 и махнете коментара пред 
 
-<pre>exit 0</pre>
+{% highlight bash %}exit 0{% endhighlight %}

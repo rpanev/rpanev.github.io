@@ -4,12 +4,8 @@ title: server status motd
 date: 2013-11-10T15:51:32+00:00
 author: panev
 layout: post
-guid: http://panevinfo.eu/blog//?p=263
-permalink: /server-status-motd.html
-tie_views:
-  - "196"
 categories:
-  - code
+  - bash
   - FreeBSD
   - Linux
 ---
@@ -17,14 +13,15 @@ categories:
 
 Създайте следният файл :
 
-<pre>vim /usr/local/bin/systemstats.sh
-</pre>
+{% highlight shell %}
+vim /usr/local/bin/systemstats.sh
+{% endhighlight %}
 
-<!--more-->
 
 Поставете следният код в него :
 
-<pre>#!/bin/bash
+{% highlight bash %}
+#!/bin/bash
 #
 # Server Status Script
 
@@ -48,30 +45,36 @@ Updated: `date`
 - Disk Space Used           = `df -h | awk '{ a = $4 } END { print a }'`
 " > /etc/motd
 # End of script
-</pre>
+{% endhighlight %}
 
 Направете скрипта изпълним със следната команда :
 
-<pre>chmod +x /usr/local/bin/systemstats.sh
-</pre>
+{% highlight bash %}chmod +x /usr/local/bin/systemstats.sh
+{% endhighlight %}
 
 Добавете скрипта в crontab така, че на всеки 5 минути да се изпълнява:
 
-<pre>vim  /etc/crontab
-</pre>
+{% highlight shell %}
+vim  /etc/crontab
+{% endhighlight %}
 
 Добавете следният ред:
 
-<pre># Status Script
-*/5 * * * * root /usr/local/bin/systemstats.sh</pre>
+{% highlight bash %}
+# Status Script
+*/5 * * * * root /usr/local/bin/systemstats.sh
+{% endhighlight %}
 
 Ако не ви се чака 5 мин. изпълнете скрипта :
 
-<pre>/usr/local/bin/systemstats.sh</pre>
+{% highlight bash %}
+/usr/local/bin/systemstats.sh
+{% endhighlight %}
 
 Влезте на машината си от ново и би следвало да получите следното :
 
-<pre>System Status
+{% highlight bash %}
+System Status
 Updated: Sun Nov 10 15:45:01 EET 2013
 
 - Server Name               = eragon
@@ -85,4 +88,5 @@ Updated: Sun Nov 10 15:45:01 EET 2013
 - Memory free (cache)       = 276 Mb
 - Swap in use               = 0 Mb
 - Disk Space Used           = 47G
-</pre>
+
+{% endhighlight %}

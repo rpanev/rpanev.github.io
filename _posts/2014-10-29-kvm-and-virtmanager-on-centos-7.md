@@ -4,43 +4,23 @@ title: KVM and VirtManager on CentOS 7
 date: 2014-10-29T00:31:49+00:00
 author: panev
 layout: post
-guid: http://panevinfo.eu/blog/?p=784
-permalink: /kvm-and-virtmanager-on-centos-7.html
-wp_review_location:
-  - bottom
-wp_review_desc_title:
-  - Резюме
-wp_review_color:
-  - '#1e73be'
-wp_review_fontcolor:
-  - '#555555'
-wp_review_bgcolor1:
-  - '#e7e7e7'
-wp_review_bgcolor2:
-  - '#ffffff'
-wp_review_bordercolor:
-  - '#e7e7e7'
-wp_review_user_review_type:
-  - star
-tie_views:
-  - "289"
-image: /wp-content/uploads/2014/03/s-5c-a-517-e1414183729413.png
 categories:
-  - Разни
+  - linux
+  - kvm
+  - centos
 ---
-## KVM and VirtManager on CentOS 7 
 
 KVM is a kernel-based hypervisor which grows quickly in maturity and popularity in the Linux server market. Red Hat officially dropped Xen in favor of KVM since RHEL. With KVM being officially supported by Red Hat, installing KVM on RedHat-based systems should be a breeze.
 
 In this tutorial, I will describe how to install and configure KVM and VirtManager on CentOS. To use this tutorial, it is not required to have CentOS desktop environment. This tutorial was in fact tested on CentOS 7 server.  
-<!--more-->
+
 
 Check Hardware Virtualization Supoort
 
 KVM requires hardware virtualization support such as Intel VT or AMD&#8217;s AMD-V, which are instruction set extensions for hardware-assisted virtualization. Check if hardware virtualization support is available on CentOS host machine:
 
-<pre>egrep -i 'vmx|svm' --color=always /proc/cpuinfo
-</pre>
+{% highlight shell %}egrep -i 'vmx|svm' --color=always /proc/cpuinfo
+{% endhighlight %}
 
 If CPU flags contain &#8222;vmx&#8220; or &#8222;svm&#8220;, it means hardware virtualization support is available.
 
@@ -50,13 +30,13 @@ Before installing KVM, be aware that there are several SELinux booleans that can
 
 To disable SELinux on CentOS:
 
-<pre>nano /etc/selinux/config
-</pre>
+{% highlight shell %}nano /etc/selinux/config
+{% endhighlight %}
 
 Edit this line
 
-<pre>SELINUX=disabled
-</pre>
+{% highlight shell %}SELINUX=disabled
+{% endhighlight %}
 
 Reboot the machine for the change to take effect.
 
@@ -64,21 +44,21 @@ Install KVM, QEMU and user-space tools
 
 Install KVM and virtinst (a tool to create VMs) as follows:
 
-<pre>yum install kvm libvirt python-virtinst qemu-kvm dejavu-lgc-sans-fonts
-</pre>
+{% highlight shell %}yum install kvm libvirt python-virtinst qemu-kvm dejavu-lgc-sans-fonts
+{% endhighlight %}
 
 Start libvirtd daemon, and set it to auto-start:
 
-<pre>service libvirtd start
+{% highlight shell %}service libvirtd start
 chkconfig libvirtd on
-</pre>
+{% endhighlight %}
 
 Check if KVM has successfully been installed. You should see no error as follows.
 
-<pre>virsh -c qemu:///system list
+{% highlight shell %}virsh -c qemu:///system list
  Id    Name                           State
 ----------------------------------------------------
-</pre>
+{% endhighlight %}
 
 Configure Linux Bridge for VM Networking
 
@@ -86,15 +66,15 @@ Installing KVM alone does not allow VMs to communicate with each other or access
 
 Install a package needed to create and manage bridge devices:
 
-<pre>yum install bridge-utils</pre>
+{% highlight shell %}yum install bridge-utils{% endhighlight %}
 
 Disable Network Manager service if it&#8217;s enabled, and switch to default net manager as follows.
 
-<pre>service NetworkManager stop
+{% highlight shell %}service NetworkManager stop
 chkconfig NetworkManager off
 chkconfig network on
 service network start
-</pre>
+{% endhighlight %}
 
 To configure a new bridge, you have to pick an active network interface (e.g., eth0), and enslave it to the bridge. Depending on whether the network interface is assigned an IP address via DHCP or statically, there are two different ways to configure a new bridge.
 
@@ -102,15 +82,15 @@ To configure bridge br0 with a static IP address:
 
 edit /etc/sysconfig/network-scripts/ifcfg-eth0
 
-<pre>DEVICE=eth0
+{% highlight shell %}DEVICE=eth0
 TYPE=Ethernet
 ONBOOT=yes
 BRIDGE=br0
-</pre>
+{% endhighlight %}
 
 edit /etc/sysconfig/network-scripts/ifcfg-br0
 
-<pre>DEVICE=br0
+{% highlight shell %}DEVICE=br0
 NM_CONTROLLED=yes
 ONBOOT=yes
 TYPE=Bridge
@@ -121,18 +101,18 @@ NETMASK=255.255.255.0
 GATEWAY=192.168.1.1
 DNS1=192.168.1.1
 DNS2=8.8.8.8
-</pre>
+{% endhighlight %}
 
 Note that the configuration for the enslaved interface (eth0) does not have &#8222;BOOTPROTO&#8220; field, but &#8222;BRIDGE&#8220; field added.
 
 Once configuration files are generated accordingly, run the following to activate the change.
 
-<pre>service network restart
-</pre>
+{% highlight shell %}service network restart
+{% endhighlight %}
 
 You should now see br0 bridge interface with a proper IP address as follows.
 
-<pre>br0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+{% highlight shell %}br0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 192.168.1.44  netmask 255.255.255.0  broadcast 192.168.1.255
         inet6 fe80::230:48ff:fef9:9f38  prefixlen 64  scopeid 0x20
 
@@ -177,7 +157,7 @@ ether fe:54:00:b7:88:9b  txqueuelen 500  (Ethernet)
         RX errors 0  dropped 0  overruns 0  frame 0
         TX packets 800  bytes 549088 (536.2 KiB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-</pre>
+{% endhighlight %}
 
 **Install VirtManager**
 
@@ -185,46 +165,46 @@ The final step is to install a desktop UI called VirtManager for managing virtua
 
 To install VirtManager:
 
-<pre>yum install virt-manager libvirt qemu
-</pre>
+{% highlight shell %}yum install virt-manager libvirt qemu
+{% endhighlight %}
 
 If you are using CentOS desktop, you should be able to launch VirtManager locally at this point, by simply running:
 
-<pre>virt-manager
-</pre>
+{% highlight shell %}virt-manager
+{% endhighlight %}
 
 However, if you are using CentOS server without desktop UI, follow these steps to launch VirtManager.
 
 Enable X11 forwarding on SSH server:
 
-<pre>yum install xauth
+{% highlight shell %}yum install xauth
 nano /etc/ssh/sshd_config
 X11Forwarding yes
 service sshd restart
-</pre>
+{% endhighlight %}
 
 Next list xauth
 
-<pre>xauth list
+{% highlight shell %}xauth list
 legolas.smrad.eu/unix:10  MIT-MAGIC-COOKIE-1  7a8b4e69f4de0c5b3da1913f44f15b15
-</pre>
+{% endhighlight %}
 
 and finally add the result
 
-<pre>xauth add legolas.smrad.eu/unix:10  MIT-MAGIC-COOKIE-1  7a8b4e69f4de0c5b3da1913f44f15b15
-</pre>
+{% highlight shell %}xauth add legolas.smrad.eu/unix:10  MIT-MAGIC-COOKIE-1  7a8b4e69f4de0c5b3da1913f44f15b15
+{% endhighlight %}
 
 Then connect to your CentOS server from a separate desktop machine, and run the wrapper script vm to launch VirtManager remotely.
 
-<pre>ssh -X root@legolas.smrad.eu
-</pre>
+{% highlight shell %}ssh -X root@legolas.smrad.eu
+{% endhighlight %}
 
 In the end it is necessary to add the following rule :
 
-<pre>echo “-I FORWARD -m physdev --physdev-is-bridged -j ACCEPT” > /etc/sysconfig/iptables-forward-bridged
-</pre>
+{% highlight shell %}echo “-I FORWARD -m physdev --physdev-is-bridged -j ACCEPT” > /etc/sysconfig/iptables-forward-bridged
+{% endhighlight %}
 
 Install monitoring
 
-<pre>yum install virt-top -y
-</pre>
+{% highlight shell %}yum install virt-top -y
+{% endhighlight %}
