@@ -4,9 +4,6 @@ title: Как да инсталираме и конфигурираме Promethe
 date: 2019-09-11T18:57:43+00:00
 author: Panev
 layout: post
-#guid: https://www.rpanev.pro/?p=153
-#permalink: '/devops/%d0%ba%d0%b0%d0%ba-%d0%b4%d0%b0-%d0%b8%d0%bd%d1%81%d1%82%d0%b0%d0%bb%d0%b8%d1%80%d0%b0%d0%bc%d0%b5-%d0%b8-%d0%ba%d0%be%d0%bd%d1%84%d0%b8%d0%b3%d1%83%d1%80%d0%b8%d1%80%d0%b0%d0%bc%d0%b5-prometheus.html'
-image: /wp-content/uploads/2019/09/prometheus-logo1.png
 categories:
   - centos
   - devops
@@ -19,7 +16,9 @@ tags:
 ---
 # В това ръковоство ще научим Как да инсталираме и конфигурираме Prometheus на Linux VM <figure id="attachment_154" aria-describedby="caption-attachment-154" style="width: 440px" class="wp-caption alignnone">
 
-<img src="https://www.rpanev.pro/wp-content/uploads/2019/09/Prometheus-Logo-e1568226359309.jpg" alt="Как да инсталираме и конфигурираме Prometheus на Linux VM" width="440" height="177" class="size-full wp-image-154" srcset="https://www.rpanev.pro/wp-content/uploads/2019/09/Prometheus-Logo-e1568226359309.jpg 440w, https://www.rpanev.pro/wp-content/uploads/2019/09/Prometheus-Logo-e1568226359309-300x121.jpg 300w" sizes="(max-width: 440px) 100vw, 440px" /> Как да инсталираме и конфигурираме Prometheus на Linux VM
+<img src="https://www.rpanev.pro/wp-content/uploads/2019/09/Prometheus-Logo-e1568226359309.jpg" alt="Как да инсталираме и конфигурираме Prometheus на Linux VM" width="440" height="177" class="size-full wp-image-154" srcset="https://www.rpanev.pro/wp-content/uploads/2019/09/Prometheus-Logo-e1568226359309.jpg 440w, https://www.rpanev.pro/wp-content/uploads/2019/09/Prometheus-Logo-e1568226359309-300x121.jpg 300w" sizes="(max-width: 440px) 100vw, 440px" /> 
+
+Как да инсталираме и конфигурираме Prometheus на Linux VM
 
 
 # Инсталация от source 
