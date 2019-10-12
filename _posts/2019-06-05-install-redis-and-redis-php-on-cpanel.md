@@ -8,7 +8,7 @@ categories:
   - centos
   - linux
 ---
-Install the EPEL Repository on CentOS 7
+Install EPLE repository
 
 {% highlight bash %}
 yum install epel-release
