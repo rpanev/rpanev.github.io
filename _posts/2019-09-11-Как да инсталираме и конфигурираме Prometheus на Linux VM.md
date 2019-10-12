@@ -14,9 +14,10 @@ tags:
   - prometheus
   - systemd
 ---
-# В това ръковоство ще научим Как да инсталираме и конфигурираме Prometheus на Linux VM <figure id="attachment_154" aria-describedby="caption-attachment-154" style="width: 440px" class="wp-caption alignnone">
 
-<img src="https://www.rpanev.pro/wp-content/uploads/2019/09/Prometheus-Logo-e1568226359309.jpg" alt="Как да инсталираме и конфигурираме Prometheus на Linux VM" width="440" height="177" class="size-full wp-image-154" srcset="https://www.rpanev.pro/wp-content/uploads/2019/09/Prometheus-Logo-e1568226359309.jpg 440w, https://www.rpanev.pro/wp-content/uploads/2019/09/Prometheus-Logo-e1568226359309-300x121.jpg 300w" sizes="(max-width: 440px) 100vw, 440px" /> 
+<center>
+<img src="https://raw.githubusercontent.com/rpanev/rpanev.github.io/master/static/img/_posts/Prometheus-Logo.jpg" alt="Prometheus " />
+</center>
 
 Как да инсталираме и конфигурираме Prometheus на Linux VM
 
