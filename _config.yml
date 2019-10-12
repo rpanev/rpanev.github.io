@@ -1,0 +1,56 @@
+title: LINIX System Administration and DevOps
+description: My Personal Blog
+author: Radoslav Panev
+github: https://rpanev.pro
+about: LINIX System Administration and DevOps
+google_analytics: UA-XXXXXXXX-Y
+
+enableTags: true
+tagarray: []
+
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
+
+social:
+    - icon: fa-facebook
+      link: "https://www.facebook.com/panev"
+    - icon: fa-twitter
+      link: "https://twitter.com/RPanev"
+    - icon: fa-linkedin
+      link: "https://www.linkedin.com/in/rpanev/"
+    - icon: fa-gitlab
+      link: "https://gitlab.com/panev"
+    - icon: fa-github
+      link: "https://github.com/rpanev"
+
+share:
+  twitter_username: RPanev
+#  fb_appid: 1749788565247320
+#  linkedin_username: rpanev
+           
+urls:
+    - text: About Me
+      url: /about/
+    - text: My Projects
+      url: /projects/
+    - text: XML Feed
+      url: /feed.xml
+
+url: "https://rpanev.pro"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
+markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']
