@@ -4,9 +4,6 @@ title: Setup на iTerm2 в Mac OS
 date: 2019-05-18T22:02:39+00:00
 author: Panev
 layout: post
-#guid: https://www.rpanev.pro/?p=31
-#permalink: '/apple/macos/setup-%d0%bd%d0%b0-iterm2-%d0%b2-mac-os.html'
-image: /wp-content/uploads/2019/08/MACOS-LOGO.png
 categories:
   - macos
 tags:
@@ -18,11 +15,8 @@ tags:
 
 # Setup на iTerm2 в Mac OS
 
-&nbsp;
-
 Принципно терминла <a href="https://www.iterm2.com/" target="_blank" rel="noopener noreferrer">iTerm2</a> за Mac OS е изключително гъвкъв, функционален и много удобен за работа. Има доста възможности за къстъм конфигурация. Въпреки това реших да разнообразя малко като си направих малко промени, като изнеса част от конфигураця в оделни файлове с цел по-лесно управление. Разделих .bash\_profile на две основни части .bash\_prompt и .aliases. Както показват имената на файловете в единият е конфигурацоята на bash терминала а в другият всички къстъм команди, който съм създал за мое улеснение по време на работа с терминала
 
-<!--more-->
 
 Редактирах първо съществуващият файл **.bash_profile** като кометирах всики линий вътре и добавих следните:
 
@@ -222,8 +216,8 @@ merge = refs/heads/master
 
 {% endhighlight %}
 
-Използвах също така и темата <a href="https://ethanschoonover.com/solarized/" target="_blank" rel="noopener noreferrer">Solarized</a>, която е по-желание 🙂
+Крайният резултат е :
 
-Крайният резултат е :<figure id="attachment_32" aria-describedby="caption-attachment-32" style="width: 1180px" class="wp-caption alignnone">
-
-<img class="size-full wp-image-32" src="https://www.rpanev.pro/wp-content/uploads/2019/05/my-iterm2.jpeg" alt="Setup на iTerm2 в Mac OS" width="1180" height="572" srcset="https://www.rpanev.pro/wp-content/uploads/2019/05/my-iterm2.jpeg 1180w, https://www.rpanev.pro/wp-content/uploads/2019/05/my-iterm2-300x145.jpeg 300w, https://www.rpanev.pro/wp-content/uploads/2019/05/my-iterm2-768x372.jpeg 768w, https://www.rpanev.pro/wp-content/uploads/2019/05/my-iterm2-1024x496.jpeg 1024w" sizes="(max-width: 1180px) 100vw, 1180px" /> Setup на iTerm2 в Mac OS
+<center>
+<img src="https://raw.githubusercontent.com/rpanev/rpanev.github.io/master/static/img/_posts/my-iterm2.jpeg" alt="Setup на iTerm2 в Mac OS " />
+</center>

@@ -64,4 +64,7 @@ Create a file named ssh-key-setup.yml in directory name /etc/ansible/playbooks.
 
 To start ansible-playbook ssh-key-setup.yml -u root –ask-pass
 
-<img src="https://www.rpanev.pro/wp-content/uploads/2019/07/ansible-out-put.png" alt="Upload ssh key through ansible" width="1916" height="494" class="size-full wp-image-136" srcset="https://www.rpanev.pro/wp-content/uploads/2019/07/ansible-out-put.png 1916w, https://www.rpanev.pro/wp-content/uploads/2019/07/ansible-out-put-300x77.png 300w, https://www.rpanev.pro/wp-content/uploads/2019/07/ansible-out-put-768x198.png 768w, https://www.rpanev.pro/wp-content/uploads/2019/07/ansible-out-put-1024x264.png 1024w" sizes="(max-width: 1916px) 100vw, 1916px" /> Upload ssh key through ansible
+
+<center>
+<img src="https://raw.githubusercontent.com/rpanev/rpanev.github.io/master/static/img/_posts/ansible-out-put.png" alt="Upload ssh key through ansible " />
+</center>
