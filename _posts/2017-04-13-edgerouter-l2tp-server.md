@@ -16,9 +16,9 @@ tags:
   - ubnt
   - UDP
 ---
-## EdgeRouter X L2TP Server
-
+<center>
 <img src="https://raw.githubusercontent.com/rpanev/rpanev.github.io/master/static/img/_posts/edgerouter-x.jpg" alt="EdgeRouter X" />
+</center>
 
 EdgeRouter X L2TP Server. Купих си тия дни ново рутерче <a href="https://www.ubnt.com/edgemax/edgerouter-x/" target="_blank" rel="noopener noreferrer">EdgeRouter X</a>. Понеже съм с macbook pro и ми се налага да ползвам vpn се наложи да конфигурирам рутерчето да работи с <a href="https://en.wikipedia.org/wiki/Layer_2_Tunneling_Protocol" target="_blank" rel="noopener noreferrer">VPN L2TP</a>.
 
