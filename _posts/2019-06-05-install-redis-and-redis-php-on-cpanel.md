@@ -4,15 +4,10 @@ title: Install Redis and Redis PHP on cPanel
 date: 2019-06-05T05:13:17+00:00
 author: Panev
 layout: post
-#guid: https://www.rpanev.pro/?p=45
-#permalink: /sysadmin/linux/install-redis-and-redis-php-on-cpanel.html
-image: /wp-content/uploads/2019/06/cpanel.jpg
 categories:
   - centos
-  - system-administration
+  - linux
 ---
-# Install Redis and Redis PHP on cPanel
-
 Install the EPEL Repository on CentOS 7
 
 {% highlight bash %}
