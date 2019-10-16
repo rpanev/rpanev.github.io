@@ -13,35 +13,35 @@ tags:
 
 # Инсталация от source 
 
-1. Ъпдейт на репозиторито
+1) Ъпдейт на репозиторито
 
 {% highlight shell %}yum update -y
 {% endhighlight %}
 
-2. Отваряме страницата на проекта <a href="https://www.terraform.io/" rel="noopener noreferrer" target="_blank">Terraform</a> и сваляме последната катуална версия 
+2) Отваряме страницата на проекта <a href="https://www.terraform.io/" rel="noopener noreferrer" target="_blank">Terraform</a> и сваляме последната катуална версия 
 {% highlight shell %}
 https://releases.hashicorp.com/terraform/0.12.10/terraform_0.12.10_linux_amd64.zip
 {% endhighlight %}
 
-3. Разахивираме приложението
+3) Разахивираме приложението
 
 {% highlight shell %}
 unzip ./terraform_0.12.10_linux_amd64.zip -d /usr/local/bin/
 {% endhighlight %}
 
-4. Един бърз тест:
+4) Един бърз тест:
 {% highlight shell %}
 $ terraform -v
 Terraform v0.12.10
 {% endhighlight %}
 
-5. Създаваме си файл aws-vps.tf
+5) Създаваме си файл aws-vps.tf
 
 {% highlight shell %}
 touch aws-vps.tf
 {% endhighlight %}
 
-6. Попълваме нужната информация за вдигане на VPS, без много екстри
+6) Попълваме нужната информация за вдигане на VPS, без много екстри
 {% highlight terraform %}
 provider "aws" {
   region     = "eu-central-1"
@@ -55,7 +55,7 @@ resource "aws_instance" "panev_test_terraform" {
 }
 {% endhighlight %}
 
-7. След това трябва да инициализираме Terraform:
+7) След това трябва да инициализираме Terraform:
 
 {% highlight shell %}
 $ terraform init
@@ -97,12 +97,13 @@ To see the full set of errors that led to this message, run:
     terraform validate
 {% endhighlight %}
 
-8. Валидираме нашият код
+8) Валидираме нашият код
 {% highlight shell %}
 terraform validate
 {% endhighlight %}
  
-    - При грешка ще ни каже къде е проблема :
+- При грешка ще ни каже къде е проблема :
+
 {% highlight shell %}
 $ terraform validate
 
@@ -123,13 +124,14 @@ Either a quoted string block label or an opening brace ("{") is expected here.
 
 {% endhighlight %}
 
-    - Когато всичко е както трябва :
+- Когато всичко е както трябва :
+
 {% highlight shell %}
 $ terraform validate
 Success! The configuration is valid.
 {% endhighlight %}
 
-9. Може да изпозлваме комнадата `terraform plan` и така, че направим симулация без да направим нищо в aws:
+9) Може да изпозлваме комнадата `terraform plan` и така, ще направим симулация без да направим нищо в aws:
 {% highlight shell %}
 $ terraform plan
 Refreshing Terraform state in-memory prior to plan...
@@ -221,7 +223,7 @@ can't guarantee that exactly these actions will be performed if
 
 {% endhighlight %}
 
-10. След като се убедим в това което искаме изпълняваме `terraform apply`  и потвърждаме на въпроса с *yes* 
+10) След като се убедим в това което искаме изпълняваме `terraform apply`  и потвърждаме на въпроса с *yes* 
 {% highlight shell %}
 $ terraform apply
 
@@ -314,7 +316,7 @@ aws_instance.panev_test_terraform: Creation complete after 34s [id=i-0aae21339de
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 {% endhighlight %}
 
-11. За да премахнем инстанцията пишем `terraform destroy` и потвърждаме на въпроса с *yes* 
+11) За да премахнем инстанцията пишем `terraform destroy` и потвърждаме на въпроса с *yes* 
 {% highlight shell %}
 $ terraform destroy
 aws_instance.panev_test_terraform: Refreshing state... [id=i-084ff7c42ceb73240]
