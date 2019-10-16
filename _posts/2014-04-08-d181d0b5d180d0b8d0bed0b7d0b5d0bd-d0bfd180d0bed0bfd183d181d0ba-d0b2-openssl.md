@@ -1,5 +1,5 @@
 ---
-id: 655
+id: 22
 title: Сериозен пропуск в OpenSSL
 date: 2014-04-08T12:02:37+00:00
 author: panev

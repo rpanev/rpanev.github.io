@@ -1,5 +1,5 @@
 ---
-id: 664
+id: 24
 title: vi commands
 date: 2014-04-21T12:20:23+00:00
 author: panev

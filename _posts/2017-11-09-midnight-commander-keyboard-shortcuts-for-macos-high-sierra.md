@@ -1,5 +1,5 @@
 ---
-id: 1025
+id: 37
 title:  Midnight Commander Keyboard Shortcuts for MacOS High Sierra
 date: 2017-11-09T10:25:12+00:00
 author: panev

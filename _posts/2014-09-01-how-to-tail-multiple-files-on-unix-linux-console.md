@@ -1,5 +1,5 @@
 ---
-id: 738
+id: 27
 title: How To Tail Multiple Files on UNIX / Linux Console
 date: 2014-09-01T10:09:21+00:00
 author: panev

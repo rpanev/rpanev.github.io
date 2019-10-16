@@ -1,5 +1,5 @@
 ---
-id: 281
+id: 9
 title: bash sript for iptables
 date: 2013-12-05T13:33:58+00:00
 author: panev

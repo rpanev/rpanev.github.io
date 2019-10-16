@@ -1,5 +1,5 @@
 ---
-id: 45
+id: 39
 title: Install Redis and Redis PHP on cPanel
 date: 2019-06-05T05:13:17+00:00
 author: Panev

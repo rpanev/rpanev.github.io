@@ -1,5 +1,5 @@
 ---
-id: 630
+id: 21
 title: 'KVM CentOS 6.5 how to'
 date: 2014-04-05T23:56:23+00:00
 author: panev

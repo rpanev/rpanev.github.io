@@ -1,5 +1,5 @@
 ---
-id: 236
+id: 5
 title: VPN използващ PPTP
 date: 2013-11-02T16:18:00+00:00
 author: panev

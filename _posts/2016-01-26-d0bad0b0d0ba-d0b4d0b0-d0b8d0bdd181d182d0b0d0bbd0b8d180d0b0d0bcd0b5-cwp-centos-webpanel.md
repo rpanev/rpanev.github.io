@@ -1,43 +1,15 @@
 ---
-id: 855
+id: 33
 title: 'Как да инсталираме CWP &#8211; CentOS WebPanel'
 date: 2016-01-26T06:51:17+00:00
 author: panev
 layout: post
 guid: http://panevinfo.eu/blog/?p=855
 permalink: '/%d0%ba%d0%b0%d0%ba-%d0%b4%d0%b0-%d0%b8%d0%bd%d1%81%d1%82%d0%b0%d0%bb%d0%b8%d1%80%d0%b0%d0%bc%d0%b5-cwp-centos-webpanel.html'
-wp_review_location:
-  - bottom
-wp_review_desc_title:
-  - Резюме
-wp_review_color:
-  - '#1e73be'
-wp_review_fontcolor:
-  - '#555555'
-wp_review_bgcolor1:
-  - '#e7e7e7'
-wp_review_bgcolor2:
-  - '#ffffff'
-wp_review_bordercolor:
-  - '#e7e7e7'
-post_views_count:
-  - "14"
-wp_review_user_review_type:
-  - star
-tie_views:
-  - "416"
-tie_sidebar_pos:
-  - default
-tie_post_slider:
-  - "1019"
-image: /wp-content/uploads/2016/01/centos-web-panel.jpg
 categories:
   - Linux
 tags:
   - CentOS
-  - CWP
-  - free
-  - hosting panel
 ---
 ## Как да инсталираме CWP
 

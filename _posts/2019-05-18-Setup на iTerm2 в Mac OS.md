@@ -1,5 +1,5 @@
 ---
-id: 31
+id: 38
 title: Setup на iTerm2 в Mac OS
 date: 2019-05-18T22:02:39+00:00
 author: Panev

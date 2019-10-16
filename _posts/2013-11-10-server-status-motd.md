@@ -1,5 +1,5 @@
 ---
-id: 263
+id: 8
 title: server status motd
 date: 2013-11-10T15:51:32+00:00
 author: panev

@@ -1,5 +1,5 @@
 ---
-id: 66
+id: 4
 title: Как да инсталирате chkrootkit на FreeBSD
 date: 2013-07-23T13:58:18+00:00
 author: panev

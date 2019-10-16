@@ -1,5 +1,5 @@
 ---
-id: 122
+id: 35
 title: KVM виртуализация старт на virt-manager с грешка
 date: 2016-06-15T17:49:32+00:00
 author: Panev

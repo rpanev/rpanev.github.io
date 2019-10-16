@@ -1,5 +1,5 @@
 ---
-id: 476
+id: 18
 title: 'Samba 4 &#8211; Active Directory Domain Controller'
 date: 2014-03-02T21:18:23+00:00
 author: panev

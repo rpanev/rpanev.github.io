@@ -1,5 +1,5 @@
 ---
-id: 761
+id: 28
 title: How to work with exim in console
 date: 2014-10-19T13:50:27+00:00
 author: panev

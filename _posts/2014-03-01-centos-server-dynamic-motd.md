@@ -1,5 +1,5 @@
 ---
-id: 456
+id: 16
 title: centos server dynamic motd
 date: 2014-03-01T00:00:28+00:00
 author: panev

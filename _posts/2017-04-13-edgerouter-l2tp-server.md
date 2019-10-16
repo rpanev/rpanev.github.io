@@ -1,5 +1,5 @@
 ---
-id: 114
+id: 36
 title: 'EdgeRouter X L2TP Server'
 date: 2017-04-13T17:26:57+00:00
 author: Panev

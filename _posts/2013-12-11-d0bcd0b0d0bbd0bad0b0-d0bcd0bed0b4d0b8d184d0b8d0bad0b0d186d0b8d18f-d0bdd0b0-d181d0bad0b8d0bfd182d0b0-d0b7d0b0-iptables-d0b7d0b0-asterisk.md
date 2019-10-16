@@ -1,5 +1,5 @@
 ---
-id: 1311
+id: 12
 title: 'Малка модификация на скипта за iptables  за Asterisk'
 date: 2013-12-11T13:05:57+00:00
 author: panev

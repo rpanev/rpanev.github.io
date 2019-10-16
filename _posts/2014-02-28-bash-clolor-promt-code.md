@@ -1,5 +1,5 @@
 ---
-id: 451
+id: 15
 title: bash color prompt code
 date: 2014-02-28T14:59:02+00:00
 author: panev

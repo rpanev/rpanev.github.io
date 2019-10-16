@@ -1,5 +1,5 @@
 ---
-id: 784
+id: 30
 title: KVM and VirtManager on CentOS 7
 date: 2014-10-29T00:31:49+00:00
 author: panev

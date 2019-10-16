@@ -1,5 +1,5 @@
 ---
-id: 847
+id: 34
 title: FreeBSD 11 на Raspberry Pi 2?
 date: 2016-01-26T03:25:00+00:00
 author: panev

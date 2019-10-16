@@ -1,5 +1,5 @@
 ---
-id: 835
+id: 32
 title: Raspberry pi Nginx
 date: 2016-01-19T02:06:53+00:00
 author: panev

@@ -1,5 +1,5 @@
 ---
-id: 153
+id: 43
 title: Как да инсталираме и конфигурираме Prometheus на Linux VM
 date: 2019-09-11T18:57:43+00:00
 author: Panev

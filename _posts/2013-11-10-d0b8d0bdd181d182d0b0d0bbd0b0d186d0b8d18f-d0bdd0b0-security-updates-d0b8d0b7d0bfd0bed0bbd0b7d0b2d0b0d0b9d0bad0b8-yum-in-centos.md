@@ -1,5 +1,5 @@
 ---
-id: 270
+id: 7
 title: 'Инсталация на security updates използвайки  yum в CentOS'
 date: 2013-11-10T16:35:26+00:00
 author: panev

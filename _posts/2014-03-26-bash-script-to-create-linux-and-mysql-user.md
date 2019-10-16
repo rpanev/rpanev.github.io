@@ -1,5 +1,5 @@
 ---
-id: 508
+id: 19
 title: Bash script to create linux and mysql user
 date: 2014-03-26T23:42:58+00:00
 author: panev

@@ -1,5 +1,5 @@
 ---
-id: 778
+id: 29
 title: Change default network name to old “eth0″ on RHEL 7 / CentOS 7 above
 date: 2014-10-24T22:50:33+00:00
 author: panev

@@ -1,5 +1,5 @@
 ---
-id: 461
+id: 17
 title: RAID status check for CentOS
 date: 2014-03-01T00:27:13+00:00
 author: panev

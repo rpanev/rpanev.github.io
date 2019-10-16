@@ -1,5 +1,5 @@
 ---
-id: 1308
+id: 3
 title: Как да добавя потребител към Wheel група на FreeBSD
 date: 2013-07-23T13:32:30+00:00
 author: panev

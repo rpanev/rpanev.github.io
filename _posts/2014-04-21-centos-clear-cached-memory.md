@@ -1,5 +1,5 @@
 ---
-id: 670
+id: 23
 title: 'CentOS: Clear cached memory'
 date: 2014-04-21T12:38:14+00:00
 author: panev

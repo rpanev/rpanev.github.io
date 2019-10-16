@@ -1,5 +1,5 @@
 ---
-id: 1314
+id: 13
 title: Хубав shell скрип за backup на MySql база данни
 date: 2014-02-25T22:42:15+00:00
 author: panev
