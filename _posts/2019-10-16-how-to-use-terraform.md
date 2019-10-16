@@ -313,3 +313,80 @@ aws_instance.panev_test_terraform: Creation complete after 34s [id=i-0aae21339de
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 {% endhighlight %}
+
+11. За да премахнем инстанцията пишем `terraform destroy` и потвърждаме на въпроса с *yes* 
+{% highlight shell %}
+$ terraform destroy
+aws_instance.panev_test_terraform: Refreshing state... [id=i-084ff7c42ceb73240]
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_instance.panev_test_terraform will be destroyed
+  - resource "aws_instance" "panev_test_terraform" {
+      - ami                          = "ami-9a183671" -> null
+      - arn                          = "arn:aws:ec2:eu-central-1:918488250450:instance/i-084ff7c42ceb73240" -> null
+      - associate_public_ip_address  = true -> null
+      - availability_zone            = "eu-central-1b" -> null
+      - cpu_core_count               = 1 -> null
+      - cpu_threads_per_core         = 1 -> null
+      - disable_api_termination      = false -> null
+      - ebs_optimized                = false -> null
+      - get_password_data            = false -> null
+      - id                           = "i-084ff7c42ceb73240" -> null
+      - instance_state               = "running" -> null
+      - instance_type                = "t2.micro" -> null
+      - ipv6_address_count           = 0 -> null
+      - ipv6_addresses               = [] -> null
+      - monitoring                   = false -> null
+      - primary_network_interface_id = "eni-0ae9762298a6f00bc" -> null
+      - private_dns                  = "ip-172-31-36-173.eu-central-1.compute.internal" -> null
+      - private_ip                   = "172.31.36.173" -> null
+      - public_dns                   = "ec2-18-185-69-50.eu-central-1.compute.amazonaws.com" -> null
+      - public_ip                    = "18.185.69.50" -> null
+      - security_groups              = [
+          - "default",
+        ] -> null
+      - source_dest_check            = true -> null
+      - subnet_id                    = "subnet-7a391307" -> null
+      - tags                         = {} -> null
+      - tenancy                      = "default" -> null
+      - volume_tags                  = {} -> null
+      - vpc_security_group_ids       = [
+          - "sg-57d0ac36",
+        ] -> null
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = false -> null
+          - encrypted             = false -> null
+          - iops                  = 100 -> null
+          - volume_id             = "vol-0ac02fec6b74e9030" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp2" -> null
+        }
+    }
+
+Plan: 0 to add, 0 to change, 1 to destroy.
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+aws_instance.panev_test: Destroying... [id=i-084ff7c42ceb73240]
+aws_instance.panev_test: Still destroying... [id=i-084ff7c42ceb73240, 10s elapsed]
+aws_instance.panev_test: Still destroying... [id=i-084ff7c42ceb73240, 20s elapsed]
+aws_instance.panev_test: Still destroying... [id=i-084ff7c42ceb73240, 30s elapsed]
+aws_instance.panev_test: Destruction complete after 30s
+
+Destroy complete! Resources: 1 destroyed.
+
+{% endhighlight %}
