@@ -12,10 +12,10 @@ tags:
 
 # Създаваме API Token 
 
-1) За целта е необходимо да посетим следният сайт <a href="https://console.hetzner.cloud">Hetzner</a>
-2) Създаваме/Избираме проект
-3) Отиваме на Access > API tokens и големият червен бутон `GENERATE API TOKEN`
-4) Слагаме описание и копираме тоукъна
+1. За целта е необходимо да посетим следният сайт <a href="https://console.hetzner.cloud">Hetzner</a>
+2. Създаваме/Избираме проект
+3. Отиваме на Access > API tokens и големият червен бутон `GENERATE API TOKEN`
+4. Слагаме описание и копираме тоукъна
 
 # Инсталация на hcloud: Command-line interface for Hetzner Cloud
 
