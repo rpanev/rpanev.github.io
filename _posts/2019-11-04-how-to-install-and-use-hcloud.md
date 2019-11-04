@@ -1,6 +1,6 @@
 ---
 id: 45
-title:  Инсталация на hcloud: Command-line interface for Hetzner Cloud
+title:  Инсталация на Command-line interface for Hetzner Cloud
 date: 2019-11-04T14:20:43+00:00
 author: Panev
 layout: post
