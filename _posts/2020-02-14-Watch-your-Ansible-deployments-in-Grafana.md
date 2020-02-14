@@ -64,6 +64,6 @@ grafana_password = <paasword>
 
 Създаваме си нов панел в графан (Create a dashboard), от настройките избираме подменюто "annotations"
 
-<img src='static/img/_posts/annotations.jpg' alt="Watch your Ansible deployments in Grafana!"/>
+<img src='https://raw.githubusercontent.com/rpanev/rpanev.github.io/master/static/img/_posts/annotations.jpg' alt="Watch your Ansible deployments in Grafana!"/>
 
 Аз лично съм си направим таг за всеки ansible-playbook в разлизен цвят за да си ги следя по-лесно визуално
