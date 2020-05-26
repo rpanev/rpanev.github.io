@@ -91,14 +91,4 @@ As final step, you need to test wheter the highlight works or not. Proceed to cr
     - debug: msg='{{ response.stdout }}'
 {% endhighlight %}
 
-Може да заложите конфигурацията директно в ansible.cfg файла:
-
-{% highlight shell %}
-grafana_url = "<your_grafana_server_address>:<your_grafana_server_port>/api/annotations"
-validate_grafana_certs = 1
-http_agent = 'Ansible (grafana_annotations callback)'
-grafana_user = <grafana user>
-grafana_password = <paasword>
-{% endhighlight %}
-
 Save the file, edit it again and you will now see the YAML code highlighted.
