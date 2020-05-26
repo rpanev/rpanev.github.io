@@ -77,13 +77,6 @@ color brightgreen ":( |$)"
 
 <a href="https://github.com/serialhex/nano-highlight" rel="noopener noreferrer" target="_blank">Visit the official repository of Nano Highlight </a>, a spiffy collection of nano syntax highlighting files for more information and languages available for nano. This file will be automatically added into nano and will highlight yaml files. Save changes and proceed with the last step.
 
-{% highlight shell %}
-$ export GRAFANA_SERVER=<your_grafana_server_address>
-$ export GRAFANA_PORT=<your_grafana_server_port>
-$ export GRAFANA_SECURE=0                           # 0 for HTTP, 1 for HTTPS
-$ export GRAFANA_API_TOKEN=<your_grafana_api_token>
-{% endhighlight %}
-
 3. Create Test Yaml File to see results
 As final step, you need to test wheter the highlight works or not. Proceed to create a test file with nano and write some YAML on it, for example:
 
@@ -95,7 +88,7 @@ As final step, you need to test wheter the highlight works or not. Proceed to cr
       shell: cat /etc/os-release
       register: response
 
-    - debug: msg="{{ response.stdout }}"
+    - debug: msg='{{ response.stdout }}'
 {% endhighlight %}
 
 Може да заложите конфигурацията директно в ansible.cfg файла:
