@@ -17,7 +17,7 @@ Nano is a simple terminal-based text editor. Though not as powerful as Emacs or 
 
 One of those files that you need to change often in this kind of editor are configuration file, like yaml files. Nano offers syntax highlighting for many file types, however not for yaml files. If you want to highlight this kind of files as well, you will need to follow an extra step.
 
-1. List available Nano Syntax Highlight Files
+1 List available Nano Syntax Highlight Files
 
 {% highlight shell %}
  [root@ansible]:[~]# ls /usr/share/nano/
@@ -27,7 +27,7 @@ awk.nanorc       c.nanorc          default.nanorc  gentoo.nanorc   guile.nanorc 
 [root@ansible]:[~]#
 {% endhighlight %}
 
-2. Create YAML Nano Syntax Highlighting File
+2 Create YAML Nano Syntax Highlighting File
 In order to provide syntax highlighting to your file, if the default file doesn't exist, you need to create the syntax highlighting file for this language. This file is the yaml.nanorc file and you need to create it in the mentioned directory. Run nano to create the file:
 
 {% highlight shell %}
@@ -77,7 +77,7 @@ color brightgreen ":( |$)"
 
 <a href="https://github.com/serialhex/nano-highlight" rel="noopener noreferrer" target="_blank">Visit the official repository of Nano Highlight </a>, a spiffy collection of nano syntax highlighting files for more information and languages available for nano. This file will be automatically added into nano and will highlight yaml files. Save changes and proceed with the last step.
 
-3. Create Test Yaml File to see results
+3 Create Test Yaml File to see results
 As final step, you need to test wheter the highlight works or not. Proceed to create a test file with nano and write some YAML on it, for example:
 
 {% highlight yaml %}
